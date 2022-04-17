@@ -8,7 +8,7 @@ interface InfoProps {
 export default function Infos({ number, text }: InfoProps) {
   return (
     <Flex alignItems="center">
-      <Text fontWeight="700" fontSize="2xl" color="primary.100" mr="2">
+      <Text fontWeight="700" fontSize="2xl" color="primary.100" m="2">
         {number}
       </Text>
       <Text>{text}</Text>

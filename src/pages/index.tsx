@@ -10,9 +10,14 @@ import Card from "../components/Home/Card";
 import CardTecnologies from "../components/Home/CardTecnologies";
 
 export default function Home() {
-  const isWideVersion = useBreakpointValue({
+  const isWideVersionLg = useBreakpointValue({
     base: false,
-    sm: true,
+    lg: true,
+  });
+
+  const isWideVersionMd = useBreakpointValue({
+    base: false,
+    md: true,
   });
 
   return (
@@ -29,7 +34,7 @@ export default function Home() {
         bgRepeat="no-repeat"
         bgSize="100% 100%"
       >
-        <Profile />
+        {isWideVersionLg && <Profile />}
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"
           w="100%"
@@ -44,7 +49,14 @@ export default function Home() {
           }}
         >
           <Banner />
-          <Flex w="90%" m="0 auto" mt="5" justify="space-between">
+          <Flex
+            w="90%"
+            m="0 auto"
+            mt="5"
+            justify="space-between"
+            flexWrap="wrap"
+            gap="5"
+          >
             <Infos number="1+" text="Years Experience" />
             <Infos number="3+" text="Years Studying" />
             <Infos number="0" text="Completed Professional Projects" />
@@ -54,7 +66,12 @@ export default function Home() {
             <Text fontWeight="700" fontSize="16">
               My Services
             </Text>
-            <Flex mt="5" justify="space-between">
+            <Flex
+              mt="5"
+              justify={isWideVersionMd ? "space-between" : "center"}
+              flexWrap="wrap"
+              gap="5"
+            >
               <Card
                 title="Web Development"
                 text={{
@@ -77,7 +94,7 @@ export default function Home() {
             <Text fontWeight="700" fontSize="16">
               Technologies
             </Text>
-            <Flex justify="space-between">
+            <Flex justify="space-between" flexWrap="wrap">
               <CardTecnologies title="ReactJs" />
               <CardTecnologies title="React Native" />
               <CardTecnologies title="NodeJs" />
@@ -95,6 +112,7 @@ export default function Home() {
             m="0 auto"
             mt="10"
             justify="space-between"
+            flexDirection={isWideVersionMd ? "row" : "column"}
           >
             <Flex>
               <Icon as={FaRegCopyright} />
@@ -105,7 +123,7 @@ export default function Home() {
             </Box>
           </Flex>
         </Box>
-        <Menu />
+        {isWideVersionLg && <Menu />}
       </Flex>
     </>
   );
