@@ -1,8 +1,19 @@
-import { Box, Text, keyframes, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  keyframes,
+  Button,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export default function Banner() {
   const [text, setText] = useState("");
+
+  const isWideVersionMd = useBreakpointValue({
+    base: false,
+    md: true,
+  });
 
   const blinkTextCursor = keyframes`
     from {border-right-color: rgba(0, 0, 0, .75);}
@@ -63,7 +74,7 @@ export default function Banner() {
     >
       <Box pt="28">
         <Text
-          fontSize="20"
+          fontSize={isWideVersionMd ? "18" : "14"}
           fontFamily="Courier Prime"
           color="primary.400"
           display="inline-block"
@@ -72,14 +83,20 @@ export default function Banner() {
           {text}
         </Text>
         <Text
-          fontSize="20"
+          fontSize={isWideVersionMd ? "18" : "14"}
           animation={spinAnimation}
           borderRight="2px solid rgba(0, 0, 0, .75)"
           display="inline"
         />
       </Box>
       <Box>
-        <Button colorScheme="blue" fontWeight="300" borderRadius="0" mt="5">
+        <Button
+          colorScheme="blue"
+          size="sm"
+          fontWeight="300"
+          borderRadius="0"
+          mt="5"
+        >
           View Projects
         </Button>
       </Box>

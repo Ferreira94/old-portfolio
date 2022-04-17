@@ -27,7 +27,7 @@ export default function Home() {
       </Head>
 
       <Flex
-        p="4"
+        p={isWideVersionMd ? "4" : "0"}
         h="100vh"
         bgImage="url('/images/background2.jpg')"
         bgPos="center"
