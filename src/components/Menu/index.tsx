@@ -14,8 +14,10 @@ import {
 } from "@chakra-ui/react";
 
 import React from "react";
+import NextLink from "next/link";
 
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { NavLink } from "../Link/NavLink";
 
 export default function Menu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -78,44 +80,10 @@ export default function Menu() {
           </DrawerHeader>
 
           <DrawerBody pt="40">
-            <Text
-              textTransform="uppercase"
-              cursor="pointer"
-              mb="3"
-              fontWeight="700"
-            >
-              Home
-            </Text>
-            <Text
-              textTransform="uppercase"
-              cursor="pointer"
-              mb="3"
-              fontWeight="700"
-              color="white.950"
-              _hover={{ color: "white.050" }}
-            >
-              Projects
-            </Text>
-            <Text
-              textTransform="uppercase"
-              cursor="pointer"
-              mb="3"
-              fontWeight="700"
-              color="white.950"
-              _hover={{ color: "white.050" }}
-            >
-              History
-            </Text>
-            <Text
-              textTransform="uppercase"
-              cursor="pointer"
-              mb="3"
-              fontWeight="700"
-              color="white.950"
-              _hover={{ color: "white.050" }}
-            >
-              Contact
-            </Text>
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/history">History</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
           </DrawerBody>
 
           <DrawerFooter bgColor="primary.300">
