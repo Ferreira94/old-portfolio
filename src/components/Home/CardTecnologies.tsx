@@ -36,7 +36,7 @@ export default function CardTecnologies({ title }: TecnologiesProps) {
   }
 
   return (
-    <Flex minW="90" bgColor="primary.350" p="3" mt="5" borderRadius="20">
+    <Flex minW="90" bgColor="primary.350" p="3" borderRadius="20">
       <Icon as={handleIcon()} />
       <Text ml="1" color="white.950">
         {title}

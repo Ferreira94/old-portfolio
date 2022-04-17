@@ -7,6 +7,7 @@ import {
   ListIcon,
   ListItem,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 import { FaCheck, FaDownload } from "react-icons/fa";
@@ -15,16 +16,22 @@ import Info from "./Info";
 import SkillsProgress from "./SkillsProgress";
 
 export default function Content() {
+  const isWideVersionMd = useBreakpointValue({
+    base: false,
+    md: true,
+  });
+
   return (
     <>
       <Box
         bgColor="primary.400"
+        maxW="300"
         minW="300"
         h="100%"
         textAlign="center"
         pt="60"
         pb="55"
-        px="6"
+        px={isWideVersionMd ? "6" : "3"}
         maxH="100%"
         overflow="hidden"
         overflowY="auto"

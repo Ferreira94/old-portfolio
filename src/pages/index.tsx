@@ -8,6 +8,7 @@ import Banner from "../components/Home/Banner";
 import Infos from "../components/Home/Infos";
 import Card from "../components/Home/Card";
 import CardTecnologies from "../components/Home/CardTecnologies";
+import MenuMobile from "../components/MenuMobile";
 
 export default function Home() {
   const isWideVersionLg = useBreakpointValue({
@@ -27,7 +28,7 @@ export default function Home() {
       </Head>
 
       <Flex
-        p={isWideVersionMd ? "4" : "0"}
+        p={isWideVersionLg ? "4" : "0"}
         h="100vh"
         bgImage="url('/images/background2.jpg')"
         bgPos="center"
@@ -35,10 +36,11 @@ export default function Home() {
         bgSize="100% 100%"
       >
         {isWideVersionLg && <Profile />}
+        {!isWideVersionLg && <MenuMobile />}
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"
           w="100%"
-          pt="10"
+          pt={isWideVersionMd ? "10" : "20"}
           overflow="hidden"
           overflowY="auto"
           whiteSpace="nowrap"
@@ -55,7 +57,7 @@ export default function Home() {
             mt="5"
             justify="space-between"
             flexWrap="wrap"
-            gap="5"
+            gap="2"
           >
             <Infos number="1+" text="Years Experience" />
             <Infos number="3+" text="Years Studying" />
@@ -91,10 +93,10 @@ export default function Home() {
             </Flex>
           </Box>
           <Box w="90%" m="0 auto" my="5">
-            <Text fontWeight="700" fontSize="16">
+            <Text fontWeight="700" fontSize="16" mb="5">
               Technologies
             </Text>
-            <Flex justify="space-between" flexWrap="wrap">
+            <Flex justify="space-between" flexWrap="wrap" gap="2">
               <CardTecnologies title="ReactJs" />
               <CardTecnologies title="React Native" />
               <CardTecnologies title="NodeJs" />
@@ -108,7 +110,7 @@ export default function Home() {
             w="90%"
             bgColor="primary.350"
             color="white.950"
-            p="5"
+            p={isWideVersionLg ? "5" : "3"}
             m="0 auto"
             mt="10"
             justify="space-between"

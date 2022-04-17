@@ -68,11 +68,11 @@ export default function Banner() {
       bgRepeat="no-repeat"
       bgSize="100% 100%"
       w="90%"
-      h="430"
+      h={isWideVersionMd ? "430" : "300"}
       m="0 auto"
       opacity="0.8"
     >
-      <Box pt="28">
+      <Box pt={isWideVersionMd ? "28" : "12"}>
         <Text
           fontSize={isWideVersionMd ? "18" : "14"}
           fontFamily="Courier Prime"
