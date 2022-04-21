@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 
 import React from "react";
-import NextLink from "next/link";
 
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "../Link/NavLink";

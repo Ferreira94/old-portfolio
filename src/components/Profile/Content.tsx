@@ -44,7 +44,7 @@ export default function Content() {
       >
         <Info title="Residence" text="Brazil" />
         <Info title="City" text="São Lourenço do Sul - RS" />
-        <Info title="Age" text="Brazil" />
+        <Info title="Age" text="28 years" />
 
         <Divider my="5" opacity="0.1" />
         <Flex justify="space-around">
@@ -74,16 +74,18 @@ export default function Content() {
           </ListItem>
         </List>
         <Divider my="5" opacity="0.1" />
-        <Flex
-          cursor="pointer"
-          color="white.950"
-          _hover={{ color: "white.050" }}
-        >
-          <Text fontWeight="700" textTransform="uppercase">
-            Download CV
-          </Text>
-          <Icon as={FaDownload} fontSize="14" ml="1" />
-        </Flex>
+        <a href={"/images/Curriculum.pdf"} download="curriculum.pdf">
+          <Flex
+            cursor="pointer"
+            color="white.950"
+            _hover={{ color: "white.050" }}
+          >
+            <Text fontWeight="700" textTransform="uppercase">
+              Download CV
+            </Text>
+            <Icon as={FaDownload} fontSize="14" ml="1" />
+          </Flex>
+        </a>
       </Box>
     </>
   );

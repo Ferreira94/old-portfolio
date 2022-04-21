@@ -5,6 +5,7 @@ import {
   Button,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Banner() {
@@ -97,7 +98,7 @@ export default function Banner() {
           borderRadius="0"
           mt="5"
         >
-          View Projects
+          <Link href={"/projects"}>View Projects</Link>
         </Button>
       </Box>
     </Box>
