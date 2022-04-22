@@ -51,7 +51,7 @@ export default function History() {
             <Spinner color="primary.100" />
           </Flex>
         </Box>
-        {isWideVersionLg && <Menu />}
+        {isWideVersionLg && <Menu title="History" />}
       </Flex>
     </>
   );
