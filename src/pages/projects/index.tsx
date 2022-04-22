@@ -3,6 +3,7 @@ import Head from "next/head";
 import Menu from "../../components/Menu";
 import MenuMobile from "../../components/MenuMobile";
 import Profile from "../../components/Profile";
+import ProjectCard from "../../components/Projects/ProjectCard";
 
 export default function Projects() {
   const isWideVersionLg = useBreakpointValue({
@@ -35,7 +36,7 @@ export default function Projects() {
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"
           w="100%"
-          pt={isWideVersionMd ? "10" : "20"}
+          pt={isWideVersionLg ? "10" : "20"}
           overflow="hidden"
           overflowY="auto"
           whiteSpace="nowrap"
@@ -45,13 +46,28 @@ export default function Projects() {
             },
           }}
         >
-          <Flex justify="center" align="center" flexDirection="column" h="100%">
-            <Text fontSize="24">Projects Page</Text>
-            <Text fontSize="24">Development Stage...</Text>
-            <Spinner color="primary.100" />
-          </Flex>
+          <Box w="90%" m="0 auto">
+            <Text fontSize="xl" mb="5">
+              Projects
+            </Text>
+            <Flex
+              justify={isWideVersionLg ? "space-between" : "center"}
+              flexWrap="wrap"
+              gap="3"
+            >
+              <ProjectCard
+                title="Blog.Star"
+                href={{
+                  repository: "https://github.com/Ferreira94/Blog.Star",
+                  page: "https://blogstar-universe.vercel.app",
+                }}
+                text="Venha acompanhar as histórias mais <br />
+                 emocionantes do Universo de Star Wars."
+              />
+            </Flex>
+          </Box>
         </Box>
-        {isWideVersionLg && <Menu />}
+        {isWideVersionLg && <Menu title="Projects" />}
       </Flex>
     </>
   );

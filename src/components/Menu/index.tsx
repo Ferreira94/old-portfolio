@@ -18,7 +18,11 @@ import React from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "../Link/NavLink";
 
-export default function Menu() {
+interface MenuProps {
+  title: string;
+}
+
+export default function Menu({ title }: MenuProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -51,7 +55,7 @@ export default function Menu() {
           mt="10"
           color="white.950"
         >
-          Home
+          {title}
         </Text>
       </Box>
 

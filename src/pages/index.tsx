@@ -65,9 +65,7 @@ export default function Home() {
             <Infos number="1" text="Own Projects Completed" />
           </Flex>
           <Box w="90%" m="0 auto" my="5">
-            <Text fontWeight="700" fontSize="16">
-              My Services
-            </Text>
+            <Text fontSize="xl">My Services</Text>
             <Flex
               mt="5"
               justify={isWideVersionMd ? "space-between" : "center"}
@@ -93,7 +91,7 @@ export default function Home() {
             </Flex>
           </Box>
           <Box w="90%" m="0 auto" my="5">
-            <Text fontWeight="700" fontSize="16" mb="5">
+            <Text fontSize="xl" mb="5">
               Technologies
             </Text>
             <Flex justify="space-between" flexWrap="wrap" gap="2">
@@ -125,7 +123,7 @@ export default function Home() {
             </Box>
           </Flex>
         </Box>
-        {isWideVersionLg && <Menu />}
+        {isWideVersionLg && <Menu title="Home" />}
       </Flex>
     </>
   );
