@@ -74,7 +74,7 @@ export default function Content() {
           </ListItem>
         </List>
         <Divider my="5" opacity="0.1" />
-        <a href={"/images/Curriculum.pdf"} download="curriculum.pdf">
+        <a href={"/pdf/Curriculum.pdf"} download="curriculum.pdf">
           <Flex
             cursor="pointer"
             color="white.950"

@@ -23,7 +23,7 @@ export default function ProjectCard({ title, text, href }: CardProps) {
     <Box
       minW="300"
       maxW="425"
-      w="47%"
+      w="49%"
       h={isWideVersionMd ? "72" : "64"}
       bgImage="url('/images/blogstar.png')"
       bgPos="center"
@@ -54,7 +54,7 @@ export default function ProjectCard({ title, text, href }: CardProps) {
           mt="1"
           maxW="10"
         />
-        <Flex mt="2" justify="space-around">
+        <Flex mt={isWideVersionMd ? "2" : "1"} justify="space-around">
           <Link href={href.page} passHref>
             <a target="_blank" rel="noopener noreferrer">
               <Flex
@@ -89,19 +89,4 @@ export default function ProjectCard({ title, text, href }: CardProps) {
       </Box>
     </Box>
   );
-}
-
-{
-  /* <Link href="https://github.com/Ferreira94" passHref>
-  <a target="_blank" rel="noopener noreferrer">
-    <Icon
-      as={FaGithub}
-      h={isWideVersionMd ? "5" : "4"}
-      w={isWideVersionMd ? "5" : "4"}
-      cursor="pointer"
-      color="white.950"
-      _hover={{ color: "white.050" }}
-    />
-  </a>
-</Link>; */
 }

@@ -4,6 +4,7 @@ export const theme = extendTheme({
   breakpoints: {
     lg: "73em",
     md: "40em",
+    ml: "50em",
   },
 
   colors: {

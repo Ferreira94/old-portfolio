@@ -1,6 +1,5 @@
-import { Box, Flex, Icon, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import Head from "next/head";
-import { FaRegCopyright } from "react-icons/fa";
 
 import Profile from "../components/Profile";
 import Menu from "../components/Menu";
@@ -9,6 +8,7 @@ import Infos from "../components/Home/Infos";
 import Card from "../components/Home/Card";
 import CardTecnologies from "../components/Home/CardTecnologies";
 import MenuMobile from "../components/MenuMobile";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const isWideVersionLg = useBreakpointValue({
@@ -74,19 +74,15 @@ export default function Home() {
             >
               <Card
                 title="Web Development"
-                text={{
-                  lineOne: "Website creation and development,",
-                  lineTwo: " using the best and newest",
-                  lineThree: "technologies.",
-                }}
+                text={
+                  "Website creation and <br /> development  using the best and <br/> newest technologies."
+                }
               />
               <Card
                 title="Mobile Development"
-                text={{
-                  lineOne: "Mobile application creation",
-                  lineTwo: "and development, using the best",
-                  lineThree: "and newest technologies.",
-                }}
+                text={
+                  "Mobile application creation <br /> and development using the best <br /> and newest technologies."
+                }
               />
             </Flex>
           </Box>
@@ -104,24 +100,7 @@ export default function Home() {
               <CardTecnologies title="Prismic" />
             </Flex>
           </Box>
-          <Flex
-            w="90%"
-            bgColor="primary.350"
-            color="white.950"
-            p={isWideVersionLg ? "5" : "3"}
-            m="0 auto"
-            mt="10"
-            justify="space-between"
-            flexDirection={isWideVersionMd ? "row" : "column"}
-          >
-            <Flex>
-              <Icon as={FaRegCopyright} />
-              <Text ml="1">2022 4sTech</Text>
-            </Flex>
-            <Box>
-              <Text>Template author: Luciano Ferreira</Text>
-            </Box>
-          </Flex>
+          <Footer />
         </Box>
         {isWideVersionLg && <Menu title="Home" />}
       </Flex>

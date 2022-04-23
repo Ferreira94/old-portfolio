@@ -3,11 +3,7 @@ import { MdNavigateNext } from "react-icons/md";
 
 interface CardProps {
   title: string;
-  text: {
-    lineOne: string;
-    lineTwo: string;
-    lineThree: string;
-  };
+  text: string;
 }
 
 export default function Card({ title, text }: CardProps) {
@@ -16,11 +12,13 @@ export default function Card({ title, text }: CardProps) {
       <Text fontWeight="700" fontSize="14">
         {title}
       </Text>
-      <Box h="120" my="5" color="white.950">
-        <Text>{text.lineOne}</Text>
-        <Text>{text.lineTwo}</Text>
-        <Text>{text.lineThree}</Text>
-      </Box>
+      <Box
+        h="120"
+        my="5"
+        color="white.950"
+        fontSize="14"
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
 
       <Link>
         <Flex color="primary.100">
