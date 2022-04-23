@@ -30,7 +30,7 @@ export default function Contact() {
         bgSize="100% 100%"
       >
         {isWideVersionLg && <Profile />}
-        {!isWideVersionLg && <MenuMobile />}
+        {!isWideVersionLg && <MenuMobile title="Contact" />}
 
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"

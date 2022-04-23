@@ -36,7 +36,7 @@ export default function Home() {
         bgSize="100% 100%"
       >
         {isWideVersionLg && <Profile />}
-        {!isWideVersionLg && <MenuMobile />}
+        {!isWideVersionLg && <MenuMobile title="Home" />}
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"
           w="100%"

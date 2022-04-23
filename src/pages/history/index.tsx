@@ -18,11 +18,6 @@ export default function History() {
     ml: true,
   });
 
-  const isWideVersionMd = useBreakpointValue({
-    base: false,
-    md: true,
-  });
-
   return (
     <>
       <Head>
@@ -38,7 +33,7 @@ export default function History() {
         bgSize="100% 100%"
       >
         {isWideVersionLg && <Profile />}
-        {!isWideVersionLg && <MenuMobile />}
+        {!isWideVersionLg && <MenuMobile title="History" />}
 
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"

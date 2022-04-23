@@ -16,11 +16,15 @@ import {
 
 import React from "react";
 
+interface MenuMobileProps {
+  title: string;
+}
+
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "../Link/NavLink";
 import ProfileMobile from "./ProfileMobile";
 
-export default function MenuMobile() {
+export default function MenuMobile({ title }: MenuMobileProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -40,7 +44,7 @@ export default function MenuMobile() {
       position="absolute"
       zIndex="5"
     >
-      <ProfileMobile />
+      <ProfileMobile title={title} />
 
       <Box>
         <Icon

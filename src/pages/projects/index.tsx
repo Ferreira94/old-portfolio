@@ -32,7 +32,7 @@ export default function Projects() {
         bgSize="100% 100%"
       >
         {isWideVersionLg && <Profile />}
-        {!isWideVersionLg && <MenuMobile />}
+        {!isWideVersionLg && <MenuMobile title="Projects" />}
 
         <Box
           bgColor="rgba(32, 32, 48, 0.85)"
