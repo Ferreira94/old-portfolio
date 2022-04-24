@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 interface itemProps {
   title: string;
@@ -10,13 +10,8 @@ interface CardProps {
 }
 
 export default function ContactCard({ items }: CardProps) {
-  const isWideVersionMd = useBreakpointValue({
-    base: false,
-    md: true,
-  });
-
   return (
-    <Box minW="270" maxW="270" bgColor="primary.300" p="5" mt="5" mr="1">
+    <Box minW="260" maxW="260" bgColor="primary.350" p="5" mt="5" mr="1">
       {items.map((item) => (
         <Flex key={item.title} justify="space-between">
           <Text>{item.title}</Text>

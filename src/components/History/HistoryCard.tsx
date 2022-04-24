@@ -33,7 +33,7 @@ export default function HistoryCard({
   });
 
   return (
-    <Box minW="340" maxW="480" w="90%" bgColor="primary.300" p="3" mt="5">
+    <Box minW="340" maxW="480" w="90%" bgColor="primary.350" p="3" mt="5">
       <Flex justify="space-between" align="center">
         <Text fontWeight="700" fontSize="14">
           {title}

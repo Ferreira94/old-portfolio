@@ -37,7 +37,7 @@ export const theme = extendTheme({
     },
     Button: {
       defaultProps: {
-        colorScheme: "gray",
+        colorScheme: "primary.400",
       },
     },
   },
