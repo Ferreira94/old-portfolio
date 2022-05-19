@@ -1,18 +1,21 @@
 import { Box, Flex, Icon, Text, useBreakpointValue } from "@chakra-ui/react";
 import Link from "next/link";
 import { useState } from "react";
-import { FaGithub, FaEye } from "react-icons/fa";
+import { FaGithub, FaEye, FaFigma } from "react-icons/fa";
+import { string } from "yup";
 
 interface CardProps {
+  image: string;
   title: string;
   text: string;
   href: {
     repository: string;
     page: string;
+    figma?: string;
   };
 }
 
-export default function ProjectCard({ title, text, href }: CardProps) {
+export default function ProjectCard({ image, title, text, href }: CardProps) {
   const [isVisible, setIsVisible] = useState(false);
   const isWideVersionMd = useBreakpointValue({
     base: false,
@@ -24,8 +27,8 @@ export default function ProjectCard({ title, text, href }: CardProps) {
       minW="300"
       maxW="425"
       w="49%"
-      h={isWideVersionMd ? "72" : "64"}
-      bgImage="url('/images/blogstar.png')"
+      h={isWideVersionMd ? "80" : "72"}
+      bgImage={image}
       bgPos="center"
       bgRepeat="no-repeat"
       bgSize="100% 100%"
@@ -43,7 +46,7 @@ export default function ProjectCard({ title, text, href }: CardProps) {
         px={isWideVersionMd ? "20" : "7"}
         py={isWideVersionMd ? "3" : "1"}
         position="relative"
-        top={isWideVersionMd ? "36" : "32"}
+        top={isWideVersionMd ? "40" : "36"}
         display={isVisible ? "block" : "none"}
       >
         <Text fontSize="md">{title}</Text>
@@ -70,6 +73,23 @@ export default function ProjectCard({ title, text, href }: CardProps) {
               </Flex>
             </a>
           </Link>
+          {href.figma && (
+            <Link href={href.figma} passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <Flex
+                  py="2"
+                  px="3"
+                  bgColor="primary.400"
+                  borderRadius="50"
+                  cursor="pointer"
+                  alignItems="center"
+                >
+                  <Icon as={FaFigma} color="white.050" mr="1" />
+                  <Text>Layout</Text>
+                </Flex>
+              </a>
+            </Link>
+          )}
           <Link href={href.repository} passHref>
             <a target="_blank" rel="noopener noreferrer">
               <Flex
