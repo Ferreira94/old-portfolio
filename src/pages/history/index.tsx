@@ -71,16 +71,16 @@ export default function History() {
                 ]}
               />
               <HistoryCard
-                title="Curso WebMaster Front-End"
-                period="Jul 2019 - Nov 2019"
-                institution="Danki-Code"
+                title="Ignite Trilha ReactJs"
+                period="Nov 2021 - Mar 2022"
+                institution="Rocketseat"
                 items={[
-                  { text: "Fudamentos Front-end" },
-                  { text: "Html" },
-                  { text: "Css" },
-                  { text: "JavaScript" },
+                  { text: "Fundamentos ReactJs" },
+                  { text: "Fundamentos NextJs" },
+                  { text: "Testes Unitários" },
+                  { text: "Chakra UI" },
                 ]}
-                certificate="Danki Code"
+                certificate="Ignite React"
               />
               <HistoryCard
                 title="Programa Starter Growdev"
@@ -99,26 +99,20 @@ export default function History() {
                 certificate="Growdev"
               />
               <HistoryCard
-                title="Ignite Trilha ReactJs"
-                period="Nov 2021 - Mar 2022"
-                institution="Rocketseat"
+                title="Curso WebMaster Front-End"
+                period="Jul 2019 - Nov 2019"
+                institution="Danki-Code"
                 items={[
-                  { text: "Fundamentos ReactJs" },
-                  { text: "Fundamentos NextJs" },
-                  { text: "Testes Unitários" },
-                  { text: "Chakra UI" },
+                  { text: "Fudamentos Front-end" },
+                  { text: "Html" },
+                  { text: "Css" },
+                  { text: "JavaScript" },
                 ]}
-                certificate="Ignite React"
+                certificate="Danki Code"
               />
             </Box>
             <Box mt={isWideVersionMl ? "0" : "10"}>
               <Text fontSize="xl">Work History</Text>
-              <HistoryCard
-                title="Pointer Softwares"
-                period="Mai 2021 - Nov 2021"
-                institution="Fullstack Developer"
-                items={[{ text: "PHP" }, { text: "Java" }, { text: "MySQL" }]}
-              />
               <HistoryCard
                 title="Heelpy"
                 period="Jul 2021 - Actual"
@@ -127,7 +121,7 @@ export default function History() {
               />
               <HistoryCard
                 title="Fidelizou.me"
-                period="Nov 2021 - Actual"
+                period="Nov 2021 - Mai 2022"
                 institution="Fullstack Developer"
                 items={[
                   { text: "VueJs" },
@@ -135,6 +129,12 @@ export default function History() {
                   { text: "PostgreSQL" },
                   { text: "Docker" },
                 ]}
+              />
+              <HistoryCard
+                title="Pointer Softwares"
+                period="Mai 2021 - Nov 2021"
+                institution="Fullstack Developer"
+                items={[{ text: "PHP" }, { text: "Java" }, { text: "MySQL" }]}
               />
             </Box>
           </Flex>

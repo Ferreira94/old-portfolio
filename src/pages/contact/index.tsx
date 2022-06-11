@@ -110,10 +110,10 @@ export default function Contact() {
               <ContactCard
                 items={[
                   { title: "Country:", description: "Brazil" },
-                  { title: "City:", description: "São Loureço do Sul-RS" },
+                  { title: "City:", description: "Jaguarão-RS" },
                   {
                     title: "Street:",
-                    description: "Rua General Argolo, nº 763",
+                    description: "Rua Curuzu, nº 1890",
                   },
                 ]}
               />
@@ -126,7 +126,7 @@ export default function Contact() {
                   },
                   {
                     title: "Instagram:",
-                    description: "@luciano_ferreir4",
+                    description: "@l.ferreir4",
                   },
                 ]}
               />

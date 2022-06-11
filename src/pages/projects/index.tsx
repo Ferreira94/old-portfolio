@@ -48,7 +48,7 @@ export default function Projects() {
             },
           }}
         >
-          <Box w="90%" m="0 auto" mb="120" height="100%">
+          <Box w="90%" m="0 auto" height="100%">
             <Text fontSize="xl" mb="5">
               Projects
             </Text>
@@ -58,7 +58,7 @@ export default function Projects() {
               gap="3"
             >
               <ProjectCard
-                image="/images/blogstar.png"
+                image="/images/blogstar.svg"
                 title="Blog.Star"
                 href={{
                   repository: "https://github.com/Ferreira94/Blog.Star",
@@ -68,7 +68,7 @@ export default function Projects() {
                  emocionantes do Universo de Star Wars."
               />
               <ProjectCard
-                image="/images/troca_inteligente.png"
+                image="/images/troca_inteligente.svg"
                 title="Troca Inteligente"
                 href={{
                   repository:
@@ -77,13 +77,21 @@ export default function Projects() {
                   figma:
                     "https://www.figma.com/file/RC1CsPF0Xq34PlYNG5aDFV/Tela---Hackathon",
                 }}
-                text="Projeto criado para o ProviHack do Agora, <br /> 
-                 onde o  projeto se consagrou  vencedor <br /> 
-                do evento."
+                text="Projeto criado para o ProviHack do Agora, <br />
+                venha mudar o futuro e seja recompensado."
+              />
+              <ProjectCard
+                image="/images/heelpy.svg"
+                title="Heelpy"
+                href={{
+                  page: "https://www.heelpy.com.br/",
+                }}
+                text="Landing Page para divulgar aplicativo, <br />
+                com o Heelpy você nunca mais se sentirá só."
               />
             </Flex>
+            <Footer />
           </Box>
-          <Footer />
         </Box>
         {isWideVersionLg && <Menu title="Projects" />}
       </Flex>

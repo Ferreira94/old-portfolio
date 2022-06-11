@@ -9,7 +9,7 @@ interface CardProps {
   title: string;
   text: string;
   href: {
-    repository: string;
+    repository?: string;
     page: string;
     figma?: string;
   };
@@ -21,13 +21,17 @@ export default function ProjectCard({ image, title, text, href }: CardProps) {
     base: false,
     md: true,
   });
+  const isWideVersionLg = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
 
   return (
     <Box
       minW="300"
       maxW="425"
-      w="49%"
-      h={isWideVersionMd ? "80" : "72"}
+      w={isWideVersionLg ? "49%" : "100%"}
+      h="60"
       bgImage={image}
       bgPos="center"
       bgRepeat="no-repeat"
@@ -42,11 +46,11 @@ export default function ProjectCard({ image, title, text, href }: CardProps) {
       <Box
         bgColor="primary.300"
         w="100%"
-        h="50%"
-        px={isWideVersionMd ? "20" : "7"}
-        py={isWideVersionMd ? "3" : "1"}
+        h="60%"
+        px={isWideVersionMd ? "20" : "5"}
+        py="3"
         position="relative"
-        top={isWideVersionMd ? "40" : "36"}
+        top={isWideVersionMd ? "40%" : "40%"}
         display={isVisible ? "block" : "none"}
       >
         <Text fontSize="md">{title}</Text>
@@ -90,21 +94,23 @@ export default function ProjectCard({ image, title, text, href }: CardProps) {
               </a>
             </Link>
           )}
-          <Link href={href.repository} passHref>
-            <a target="_blank" rel="noopener noreferrer">
-              <Flex
-                py="2"
-                px="3"
-                bgColor="primary.400"
-                borderRadius="50"
-                cursor="pointer"
-                alignItems="center"
-              >
-                <Icon as={FaGithub} color="white.050" mr="1" />
-                <Text>Repositório</Text>
-              </Flex>
-            </a>
-          </Link>
+          {href.repository && (
+            <Link href={href.repository} passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <Flex
+                  py="2"
+                  px="3"
+                  bgColor="primary.400"
+                  borderRadius="50"
+                  cursor="pointer"
+                  alignItems="center"
+                >
+                  <Icon as={FaGithub} color="white.050" mr="1" />
+                  <Text>Repositório</Text>
+                </Flex>
+              </a>
+            </Link>
+          )}
         </Flex>
       </Box>
     </Box>

@@ -43,8 +43,8 @@ export default function Content() {
         }}
       >
         <Info title="Residence" text="Brazil" />
-        <Info title="City" text="São Lourenço do Sul - RS" />
-        <Info title="Age" text="28 years" />
+        <Info title="City" text="Jaguarão - RS" />
+        <Info title="Age" text="27 years" />
 
         <Divider my="5" opacity="0.1" />
         <Flex justify="space-around">
@@ -74,7 +74,7 @@ export default function Content() {
           </ListItem>
         </List>
         <Divider my="5" opacity="0.1" />
-        <a href={"/pdf/Curriculum.pdf"} download="curriculum.pdf">
+        <a href={"/pdf/LucianoFerreira.pdf"} download="curriculum.pdf">
           <Flex
             cursor="pointer"
             color="white.950"

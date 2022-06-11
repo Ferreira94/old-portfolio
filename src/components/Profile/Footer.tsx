@@ -53,10 +53,11 @@ export default function Footer() {
         </a>
       </Link>
 
-      <Link href="https://www.instagram.com/luciano_ferreir4/" passHref>
+      <Link href="https://www.instagram.com/l.ferreir4//" passHref>
         <a target="_blank" rel="noopener noreferrer">
           <Icon
             as={FaInstagram}
+            h={isWideVersionMd ? "5" : "4"}
             w={isWideVersionMd ? "5" : "4"}
             cursor="pointer"
             color="white.950"

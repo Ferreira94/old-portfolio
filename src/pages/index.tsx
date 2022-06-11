@@ -60,9 +60,9 @@ export default function Home() {
             gap="2"
           >
             <Infos number="1+" text="Years Experience" />
-            <Infos number="3+" text="Years Studying" />
-            <Infos number="0" text="Completed Professional Projects" />
-            <Infos number="1" text="Own Projects Completed" />
+            <Infos number="4+" text="Years Studying" />
+            <Infos number="1" text="Completed Professional Projects" />
+            <Infos number="2" text="Own Projects Completed" />
           </Flex>
           <Box w="90%" m="0 auto" my="5">
             <Text fontSize="xl">My Services</Text>
